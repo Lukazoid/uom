@@ -5,7 +5,7 @@ cache:
 sudo: false
 
 rust:
-- 1.24.1    # Oldest supported
+- 1.28.0    # Oldest supported
 - stable
 - beta
 - nightly
@@ -18,10 +18,6 @@ matrix:
   allow_failures:
   - rust: nightly
   include:
-  - name: "Rust: 1.22.0"   # Oldest compiled
-    rust: 1.22.0
-    script: |
-      cargo build --verbose --features "use_serde"
   - name: "Rust: stable + tests"
     rust: stable
     script: |
